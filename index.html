@@ -1606,7 +1606,7 @@ body.modal-open {
             id="sentCount"
             class="nav-count"
         >
-            4
+            5
         </span>
 
     </div>
@@ -1896,7 +1896,7 @@ body.modal-open {
                 id="sentViewCount"
                 class="inbox-count"
             >
-                4 封邮件
+                5 封邮件
             </div>
 
             <div class="toolbar-spacer"></div>
@@ -1920,405 +1920,485 @@ body.modal-open {
             </button>
 
         </div>
+<!-- =================================================
+     已发送邮件列表
+================================================== -->
+
+<div
+    id="sentMailList"
+    class="mail-list"
+>
 
 
-        <!-- =================================================
-             已发送邮件列表
-        ================================================== -->
+    <!-- =================================================
+         已发送邮件 1：2026-09-24
+         最新正式函告
+    ================================================== -->
 
-        <div
-            id="sentMailList"
-            class="mail-list"
+    <article
+        class="mail-row"
+        data-mail-id="today"
+        data-folder="sent"
+        data-search-text="我 王律师 lawyerwang@beliefjustice.com 关于 2026 粤0305执调11257号案件 执行和解协议及办理事项 正式函告 执行和解 40138.26 办理流程 协议签署 原件寄送 执行法院 划扣 结案 最终结清 条款修改"
+        onclick="openMail('today')"
+    >
+
+        <input
+            class="mail-checkbox"
+            type="checkbox"
+            onclick="event.stopPropagation()"
+            aria-label="选择邮件"
         >
 
+        <div class="mail-star">
 
-            <!-- =================================================
-                 已发送邮件 1：2026-09-17
-            ================================================== -->
-
-            <article
-                class="mail-row"
-                data-mail-id="today"
-                data-folder="sent"
-                data-search-text="我 王律师 lawyerwang@beliefjustice.com 关于 2026 粤0305执调11257号 执调案件执行和解及后续办理事项的确认函 一次性最终结算金额 40138.26 执行和解 账户解封 款项支付 结案"
-                onclick="openMail('today')"
+            <button
+                class="star-btn"
+                data-star-id="today"
+                onclick="event.stopPropagation(); toggleStar('today')"
+                title="标记星标"
             >
+                ☆
+            </button>
 
-                <input
-                    class="mail-checkbox"
-                    type="checkbox"
-                    onclick="event.stopPropagation()"
-                    aria-label="选择邮件"
-                >
+        </div>
 
-                <div class="mail-star">
+        <div class="mail-avatar">
+            我
+        </div>
 
-                    <button
-                        class="star-btn"
-                        data-star-id="today"
-                        onclick="event.stopPropagation(); toggleStar('today')"
-                        title="标记星标"
-                    >
-                        ☆
-                    </button>
+        <div class="mail-main">
 
-                </div>
+            <div class="mail-header">
 
-                <div class="mail-avatar">
+                <div class="mail-sender">
                     我
                 </div>
 
-                <div class="mail-main">
-
-                    <div class="mail-header">
-
-                        <div class="mail-sender">
-                            我
-                        </div>
-
-                        <div class="mail-date">
-                            09-17 16:20
-                        </div>
-
-                    </div>
-
-                    <div class="mail-subject">
-                        关于（2026）粤0305执调11257号执调案件执行和解及后续办理事项的确认函
-                    </div>
-
-                    <div class="mail-preview">
-                        就（2026）粤0305执调11257号执调案件前期协商及执行和解事项，经双方沟通，现已就一次性最终结算金额人民币40,138.26元及后续执行和解办理方式形成一致意见。
-                    </div>
-
+                <div class="mail-date">
+                    09-24 15:00
                 </div>
 
-                <div class="mail-actions">
+            </div>
 
-                    <button
-                        class="mail-action-btn"
-                        onclick="event.stopPropagation(); archiveMail('today')"
-                        title="归档"
-                    >
-                        ↧
-                    </button>
+            <div class="mail-subject">
+                关于（2026）粤0305执调11257号案件执行和解协议及办理事项的正式函告
+            </div>
 
-                    <button
-                        class="mail-action-btn"
-                        onclick="event.stopPropagation(); deleteMail('today')"
-                        title="删除"
-                    >
-                        ×
-                    </button>
-
-                </div>
-
-            </article>
-
-
-            <!-- =================================================
-                 已发送邮件 2：2026-09-10
-            ================================================== -->
-
-            <article
-                class="mail-row"
-                data-mail-id="case-update"
-                data-folder="sent"
-                data-search-text="我 王律师 lawyerwang@beliefjustice.com 关于 2026 粤0305执调11257号案件 执行和解协议 结案申请书 办理时间安排 一次性结算金额 40138.26 执行法院"
-                onclick="openMail('case-update')"
-            >
-
-                <input
-                    class="mail-checkbox"
-                    type="checkbox"
-                    onclick="event.stopPropagation()"
-                    aria-label="选择邮件"
-                >
-
-                <div class="mail-star">
-
-                    <button
-                        class="star-btn"
-                        data-star-id="case-update"
-                        onclick="event.stopPropagation(); toggleStar('case-update')"
-                        title="标记星标"
-                    >
-                        ☆
-                    </button>
-
-                </div>
-
-                <div class="mail-avatar">
-                    我
-                </div>
-
-                <div class="mail-main">
-
-                    <div class="mail-header">
-
-                        <div class="mail-sender">
-                            我
-                        </div>
-
-                        <div class="mail-date">
-                            09-10 16:36
-                        </div>
-
-                    </div>
-
-                    <div class="mail-subject">
-                        关于（2026）粤0305执调11257号案件执行和解协议、结案申请书及办理时间安排的沟通确认
-                    </div>
-
-                    <div class="mail-preview">
-                        就本案前期协商事项，经双方沟通，目前已就一次性结算金额人民币40,138.26元及执行和解办理安排形成一致意见。
-                    </div>
-
-                </div>
-
-                <div class="mail-actions">
-
-                    <button
-                        class="mail-action-btn"
-                        onclick="event.stopPropagation(); archiveMail('case-update')"
-                        title="归档"
-                    >
-                        ↧
-                    </button>
-
-                    <button
-                        class="mail-action-btn"
-                        onclick="event.stopPropagation(); deleteMail('case-update')"
-                        title="删除"
-                    >
-                        ×
-                    </button>
-
-                </div>
-
-            </article>
-
-
-            <!-- =================================================
-                 已发送邮件 3：2026-09-03
-            ================================================== -->
-
-            <article
-                class="mail-row"
-                data-mail-id="yesterday"
-                data-folder="sent"
-                data-search-text="我 王律师 lawyerwang@beliefjustice.com 关于 2026 粤0305执调11257号案件 协商方案及结算时间 回复函 协商方案 结算时间 协议文本 书面反馈"
-                onclick="openMail('yesterday')"
-            >
-
-                <input
-                    class="mail-checkbox"
-                    type="checkbox"
-                    onclick="event.stopPropagation()"
-                    aria-label="选择邮件"
-                >
-
-                <div class="mail-star">
-
-                    <button
-                        class="star-btn"
-                        data-star-id="yesterday"
-                        onclick="event.stopPropagation(); toggleStar('yesterday')"
-                        title="标记星标"
-                    >
-                        ☆
-                    </button>
-
-                </div>
-
-                <div class="mail-avatar">
-                    我
-                </div>
-
-                <div class="mail-main">
-
-                    <div class="mail-header">
-
-                        <div class="mail-sender">
-                            我
-                        </div>
-
-                        <div class="mail-date">
-                            09-03 16:45
-                        </div>
-
-                    </div>
-
-                    <div class="mail-subject">
-                        关于（2026）粤0305执调11257号案件协商方案及结算时间的回复函
-                    </div>
-
-                    <div class="mail-preview">
-                        就贵司代理律师于2026年9月2日致电本律师，并提出本案“协商方案及结算时间”一事，现将我方协商方案及相关方案安排通过附件正式回复如下。
-                    </div>
-
-                </div>
-
-                <div class="mail-actions">
-
-                    <button
-                        class="mail-action-btn"
-                        onclick="event.stopPropagation(); archiveMail('yesterday')"
-                        title="归档"
-                    >
-                        ↧
-                    </button>
-
-                    <button
-                        class="mail-action-btn"
-                        onclick="event.stopPropagation(); deleteMail('yesterday')"
-                        title="删除"
-                    >
-                        ×
-                    </button>
-
-                </div>
-
-            </article>
-
-
-            <!-- =================================================
-                 已发送邮件 4：2026-09-01
-            ================================================== -->
-
-            <article
-                class="mail-row"
-                data-mail-id="document"
-                data-folder="sent"
-                data-search-text="我 王律师 lawyerwang@beliefjustice.com 关于 2026 粤0305执调11257号案件 执行标的核算 协商处理 正式函告 律师函 深圳一达通企业服务有限公司 曹佩 张宁"
-                onclick="openMail('document')"
-            >
-
-                <input
-                    class="mail-checkbox"
-                    type="checkbox"
-                    onclick="event.stopPropagation()"
-                    aria-label="选择邮件"
-                >
-
-                <div class="mail-star">
-
-                    <button
-                        class="star-btn"
-                        data-star-id="document"
-                        onclick="event.stopPropagation(); toggleStar('document')"
-                        title="标记星标"
-                    >
-                        ☆
-                    </button>
-
-                </div>
-
-                <div class="mail-avatar">
-                    我
-                </div>
-
-                <div class="mail-main">
-
-                    <div class="mail-header">
-
-                        <div class="mail-sender">
-                            我
-                        </div>
-
-                        <div class="mail-date">
-                            09-01 09:00
-                        </div>
-
-                    </div>
-
-                    <div class="mail-subject">
-                        关于（2026）粤0305执调11257号案件执行标的核算及协商处理事宜的正式函告
-                    </div>
-
-                    <div class="mail-preview">
-                        现受委托人委托，就（2026）粤0305执调11257号案件执行标的核算及协商处理事宜，向贵司正式发送附件《律师函》。请贵司查收并认真审阅。
-                    </div>
-
-                </div>
-
-                <div class="mail-actions">
-
-                    <button
-                        class="mail-action-btn"
-                        onclick="event.stopPropagation(); archiveMail('document')"
-                        title="归档"
-                    >
-                        ↧
-                    </button>
-
-                    <button
-                        class="mail-action-btn"
-                        onclick="event.stopPropagation(); deleteMail('document')"
-                        title="删除"
-                    >
-                        ×
-                    </button>
-
-                </div>
-
-            </article>
-
-
-            <!-- =================================================
-                 已发送空状态
-            ================================================== -->
-
-            <div
-                id="sentEmptyState"
-                class="empty-state"
-                hidden
-            >
-
-                <div class="empty-icon">
-                    📤
-                </div>
-
-                <h3>
-                    暂无已发送邮件
-                </h3>
-
-                <p>
-                    当前没有已发送的邮件。
-                </p>
-
+            <div class="mail-preview">
+                就（2026）粤0305执调11257号执行案件，现就双方执行和解金额、协议签署、原件寄送、执行法院材料提交及后续结案办理事项正式确认。
             </div>
 
         </div>
 
-    </section>
+        <div class="mail-actions">
 
-</main>
+            <button
+                class="mail-action-btn"
+                onclick="event.stopPropagation(); archiveMail('today')"
+                title="归档"
+            >
+                ↧
+            </button>
 
+            <button
+                class="mail-action-btn"
+                onclick="event.stopPropagation(); deleteMail('today')"
+                title="删除"
+            >
+                ×
+            </button>
+
+        </div>
+
+    </article>
 
 
     <!-- =================================================
-         空状态
+         已发送邮件 2：2026-09-17
+    ================================================== -->
+
+    <article
+        class="mail-row"
+        data-mail-id="today-0917"
+        data-folder="sent"
+        data-search-text="我 王律师 lawyerwang@beliefjustice.com 关于 2026 粤0305执调11257号 执调案件执行和解及后续办理事项的确认函 一次性最终结算金额 40138.26 执行和解 账户解封 款项支付 结案"
+        onclick="openMail('today-0917')"
+    >
+
+        <input
+            class="mail-checkbox"
+            type="checkbox"
+            onclick="event.stopPropagation()"
+            aria-label="选择邮件"
+        >
+
+        <div class="mail-star">
+
+            <button
+                class="star-btn"
+                data-star-id="today-0917"
+                onclick="event.stopPropagation(); toggleStar('today-0917')"
+                title="标记星标"
+            >
+                ☆
+            </button>
+
+        </div>
+
+        <div class="mail-avatar">
+            我
+        </div>
+
+        <div class="mail-main">
+
+            <div class="mail-header">
+
+                <div class="mail-sender">
+                    我
+                </div>
+
+                <div class="mail-date">
+                    09-17 16:20
+                </div>
+
+            </div>
+
+            <div class="mail-subject">
+                关于（2026）粤0305执调11257号执调案件执行和解及后续办理事项的确认函
+            </div>
+
+            <div class="mail-preview">
+                就（2026）粤0305执调11257号执调案件前期协商及执行和解事项，经双方沟通，现已就一次性最终结算金额人民币40,138.26元及后续执行和解办理方式形成一致意见。
+            </div>
+
+        </div>
+
+        <div class="mail-actions">
+
+            <button
+                class="mail-action-btn"
+                onclick="event.stopPropagation(); archiveMail('sent-0917')"
+                title="归档"
+            >
+                ↧
+            </button>
+
+            <button
+                class="mail-action-btn"
+                onclick="event.stopPropagation(); deleteMail('sent-0917')"
+                title="删除"
+            >
+                ×
+            </button>
+
+        </div>
+
+    </article>
+
+
+    <!-- =================================================
+         已发送邮件 3：2026-09-10
+    ================================================== -->
+
+    <article
+        class="mail-row"
+        data-mail-id="case-update"
+        data-folder="sent"
+        data-search-text="我 王律师 lawyerwang@beliefjustice.com 关于 2026 粤0305执调11257号案件 执行和解协议 结案申请书 办理时间安排 一次性结算金额 40138.26 执行法院"
+        onclick="openMail('case-update')"
+    >
+
+        <input
+            class="mail-checkbox"
+            type="checkbox"
+            onclick="event.stopPropagation()"
+            aria-label="选择邮件"
+        >
+
+        <div class="mail-star">
+
+            <button
+                class="star-btn"
+                data-star-id="case-update"
+                onclick="event.stopPropagation(); toggleStar('case-update')"
+                title="标记星标"
+            >
+                ☆
+            </button>
+
+        </div>
+
+        <div class="mail-avatar">
+            我
+        </div>
+
+        <div class="mail-main">
+
+            <div class="mail-header">
+
+                <div class="mail-sender">
+                    我
+                </div>
+
+                <div class="mail-date">
+                    09-10 16:36
+                </div>
+
+            </div>
+
+            <div class="mail-subject">
+                关于（2026）粤0305执调11257号案件执行和解协议、结案申请书及办理时间安排的沟通确认
+            </div>
+
+            <div class="mail-preview">
+                就本案前期协商事项，经双方沟通，目前已就一次性结算金额人民币40,138.26元及执行和解办理安排形成一致意见。
+            </div>
+
+        </div>
+
+        <div class="mail-actions">
+
+            <button
+                class="mail-action-btn"
+                onclick="event.stopPropagation(); archiveMail('case-update')"
+                title="归档"
+            >
+                ↧
+            </button>
+
+            <button
+                class="mail-action-btn"
+                onclick="event.stopPropagation(); deleteMail('case-update')"
+                title="删除"
+            >
+                ×
+            </button>
+
+        </div>
+
+    </article>
+
+
+    <!-- =================================================
+         已发送邮件 4：2026-09-03
+    ================================================== -->
+
+    <article
+        class="mail-row"
+        data-mail-id="yesterday"
+        data-folder="sent"
+        data-search-text="我 王律师 lawyerwang@beliefjustice.com 关于 2026 粤0305执调11257号案件 协商方案及结算时间 回复函 协商方案 结算时间 协议文本 书面反馈"
+        onclick="openMail('yesterday')"
+    >
+
+        <input
+            class="mail-checkbox"
+            type="checkbox"
+            onclick="event.stopPropagation()"
+            aria-label="选择邮件"
+        >
+
+        <div class="mail-star">
+
+            <button
+                class="star-btn"
+                data-star-id="yesterday"
+                onclick="event.stopPropagation(); toggleStar('yesterday')"
+                title="标记星标"
+            >
+                ☆
+            </button>
+
+        </div>
+
+        <div class="mail-avatar">
+            我
+        </div>
+
+        <div class="mail-main">
+
+            <div class="mail-header">
+
+                <div class="mail-sender">
+                    我
+                </div>
+
+                <div class="mail-date">
+                    09-03 16:45
+                </div>
+
+            </div>
+
+            <div class="mail-subject">
+                关于（2026）粤0305执调11257号案件协商方案及结算时间的回复函
+            </div>
+
+            <div class="mail-preview">
+                就贵司代理律师于2026年9月2日致电本律师，并提出本案“协商方案及结算时间”一事，现将我方协商方案及相关方案安排通过附件正式回复如下。
+            </div>
+
+        </div>
+
+        <div class="mail-actions">
+
+            <button
+                class="mail-action-btn"
+                onclick="event.stopPropagation(); archiveMail('yesterday')"
+                title="归档"
+            >
+                ↧
+            </button>
+
+            <button
+                class="mail-action-btn"
+                onclick="event.stopPropagation(); deleteMail('yesterday')"
+                title="删除"
+            >
+                ×
+            </button>
+
+        </div>
+
+    </article>
+
+
+    <!-- =================================================
+         已发送邮件 5：2026-09-01
+    ================================================== -->
+
+    <article
+        class="mail-row"
+        data-mail-id="document"
+        data-folder="sent"
+        data-search-text="我 王律师 lawyerwang@beliefjustice.com 关于 2026 粤0305执调11257号案件 执行标的核算 协商处理 正式函告 律师函 深圳一达通企业服务有限公司 曹佩 张宁"
+        onclick="openMail('document')"
+    >
+
+        <input
+            class="mail-checkbox"
+            type="checkbox"
+            onclick="event.stopPropagation()"
+            aria-label="选择邮件"
+        >
+
+        <div class="mail-star">
+
+            <button
+                class="star-btn"
+                data-star-id="document"
+                onclick="event.stopPropagation(); toggleStar('document')"
+                title="标记星标"
+            >
+                ☆
+            </button>
+
+        </div>
+
+        <div class="mail-avatar">
+            我
+        </div>
+
+        <div class="mail-main">
+
+            <div class="mail-header">
+
+                <div class="mail-sender">
+                    我
+                </div>
+
+                <div class="mail-date">
+                    09-01 09:00
+                </div>
+
+            </div>
+
+            <div class="mail-subject">
+                关于（2026）粤0305执调11257号案件执行标的核算及协商处理事宜的正式函告
+            </div>
+
+            <div class="mail-preview">
+                现受委托人委托，就（2026）粤0305执调11257号案件执行标的核算及协商处理事宜，向贵司正式发送附件《律师函》。请贵司查收并认真审阅。
+            </div>
+
+        </div>
+
+        <div class="mail-actions">
+
+            <button
+                class="mail-action-btn"
+                onclick="event.stopPropagation(); archiveMail('document')"
+                title="归档"
+            >
+                ↧
+            </button>
+
+            <button
+                class="mail-action-btn"
+                onclick="event.stopPropagation(); deleteMail('document')"
+                title="删除"
+            >
+                ×
+            </button>
+
+        </div>
+
+    </article>
+
+
+    <!-- =================================================
+         已发送空状态
     ================================================== -->
 
     <div
-        id="emptyState"
+        id="sentEmptyState"
         class="empty-state"
         hidden
     >
 
         <div class="empty-icon">
-            📭
+            📤
         </div>
 
         <h3>
-            没有找到邮件
+            暂无已发送邮件
         </h3>
 
         <p>
-            当前列表中没有符合条件的邮件。
+            当前没有已发送的邮件。
         </p>
 
     </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================================
+     空状态
+================================================== -->
+
+<div
+    id="emptyState"
+    class="empty-state"
+    hidden
+>
+
+    <div class="empty-icon">
+        📭
+    </div>
+
+    <h3>
+        没有找到邮件
+    </h3>
+
+    <p>
+        当前列表中没有符合条件的邮件。
+    </p>
+
+</div>
 
 </div>
 
@@ -2663,21 +2743,28 @@ body.modal-open {
 
 <script>
 
+
+
+
+
 /* =========================================================
    邮件数据
    注意：
-   1. 以下 key 标签保持原结构，不要修改
-      peipei / today / yesterday / case-update / document
-   2. folder 用于区分收件箱和已发送
+   1. 日期型 ID 统一使用：
+      today-0924 / today-0917 / today-0910 / today-0903 / today-0901
+   2. folder：
       inbox = 收件箱
       sent  = 已发送
+   3. 重要：
+      JavaScript 对象 key 必须唯一。
+      因此所有邮件均使用独立的日期型 ID。
 ========================================================= */
 
 const mailData = {
 
     /* =====================================================
        收件箱
-       曹佩回复
+       2026-09-17 曹佩回复
     ===================================================== */
 
     peipei: {
@@ -2740,10 +2827,306 @@ const mailData = {
 
     /* =====================================================
        已发送
-       2026-09-17 王律师邮件
+       2026-09-24 王律师正式函告
+       
+       日期型 ID：
+       today-0924
     ===================================================== */
 
-    today: {
+    "today-0924": {
+
+        folder: "sent",
+
+        sender: "我",
+
+        address: "lawyerwang@beliefjustice.com",
+
+        avatar: "我",
+
+        date: "2026-09-24 15:00",
+
+        subject:
+            "关于（2026）粤0305执调11257号案件执行和解协议及办理事项的正式函告",
+
+        preview:
+            "就（2026）粤0305执调11257号执行案件，现就双方执行和解金额、协议签署、原件寄送、执行法院材料提交及后续结案办理事项正式确认。",
+
+        unread: false,
+
+        body: `
+            <p>致：深圳市一达通企业服务有限公司</p>
+
+            <p>特别授权代理律师：曹女士</p>
+
+            <p>尊敬的贵司及曹律师：</p>
+
+            <p>
+                就（2026）粤0305执调11257号执行案件，
+                现就双方执行和解及后续办理事项正式确认如下：
+            </p>
+
+            <p>
+                <strong>一、关于执行和解金额</strong>
+            </p>
+
+            <p>
+                经双方前期沟通，双方对于本案一次性执行和解及最终结算金额
+                <strong>人民币40,138.26元</strong>
+                已无争议。
+            </p>
+
+            <p>
+                2026年9月18日，我方已将双方近期沟通情况及上述执行和解金额向执行法院进行了说明，
+                并明确向执行法院反映，目前双方仅就执行和解过程中账户解除冻结与执行款项划扣的办理顺序存在争议，
+                请求执行法院对后续办理程序予以指导。
+            </p>
+
+            <p>
+                2026年9月22日下午约16:57，我方接听执行法官电话。
+                执行法官明确指导：
+            </p>
+
+            <p>
+                双方既已就执行和解金额达成一致，应通过执行和解协议明确本案按照
+                <strong>人民币40,138.26元</strong>
+                结案；协议签署后，由我方向执行法院提交执行和解协议及执行款项划扣相关材料，
+                由执行法院按照相关执行程序办理划扣；执行款项划扣完成后，申请执行人配合执行法院办理结案。
+            </p>
+
+            <p>
+                同时，本案结案金额应与双方确定的执行和解金额保持一致，
+                即<strong>人民币40,138.26元</strong>。
+            </p>
+
+
+            <p>
+                <strong>二、关于本次协议及办理流程</strong>
+            </p>
+
+            <p>
+                据此，我方现提交的《执行和解及执行案件最终结算协议》
+                已按照双方确定的和解金额及执行法院上述程序指导进行调整。
+            </p>
+
+            <p>
+                双方签署协议后的办理流程确定如下：
+            </p>
+
+            <p>① 双方完成协议签署；</p>
+
+            <p>② 双方互寄协议原件；</p>
+
+            <p>
+                ③ 我方收到贵司协议原件后5个工作日内，
+                向执行法院提交执行和解协议及执行款项划扣相关材料；
+            </p>
+
+            <p>
+                ④ 我方完成向执行法院提交相关材料后，
+                向贵司提供相关提交凭证的拍照、截图或者其他能够证明相关材料已经提交的有效凭证；
+            </p>
+
+            <p>
+                ⑤ 执行法院按照相关执行程序完成人民币40,138.26元执行款项的划扣；
+            </p>
+
+            <p>
+                ⑥ 贵司在上述执行款项划扣完成后5个工作日内，
+                向执行法院提交《结案申请书》及其他必要结案材料；
+            </p>
+
+            <p>
+                ⑦ 贵司完成向执行法院提交结案材料后，
+                向我方提供相关提交凭证的拍照、截图或者其他能够证明相关材料已经提交的有效凭证；
+            </p>
+
+            <p>⑧ 执行法院依法办理本案结案及相关执行措施解除手续；</p>
+
+            <p>⑨ 本案最终结清。</p>
+
+
+            <p>
+                <strong>三、关于协议文本及条款修改</strong>
+            </p>
+
+            <p>
+                本次提交的《执行和解及执行案件最终结算协议》，
+                系根据双方已经确认的执行和解金额、双方前期沟通情况以及执行法院明确的办理程序整理形成。
+            </p>
+
+            <p>
+                为避免双方在协议签署过程中因文本内容反复修改而影响案件办理，
+                双方确认，在协议正式签署前，
+                <strong>
+                    除协议中甲乙双方名称、住所地、法定代表人、姓名、身份证号码、联系方式、日期等基本信息存在需要更正的情形外，
+                    任何一方未经双方书面确认，不得擅自修改、删除、增加或者变更协议中的其他条款。
+                </strong>
+            </p>
+
+            <p>
+                如一方认为协议中的其他条款确有必要调整，
+                应当在签署前明确提出具体修改内容，并经双方协商一致后方可调整。
+                未经双方确认的单方修改内容，不作为双方最终签署协议的依据。
+            </p>
+
+            <p>
+                双方完成协议签署后，
+                除双方另行书面协商一致或者因执行法院办理要求确需进行相应调整外，
+                任何一方不得单方面要求修改已经签署的协议内容。
+            </p>
+
+
+            <p>
+                <strong>四、关于协议责任及其他条款</strong>
+            </p>
+
+            <p>
+                本次执行和解及后续办理，
+                系按照双方已经确认的和解金额以及执行法院明确的办理程序进行。
+            </p>
+
+            <p>
+                执行法院按照相关执行程序办理本案执行款项划扣，
+                双方应当按照执行法院确定的办理程序分别履行相应的配合义务。
+            </p>
+
+            <p>
+                因此，本协议仅对双方各自应履行的程序性配合事项进行明确，
+                不另行设置与本次执行和解及法院办理程序无关的其他责任。
+            </p>
+
+            <p>
+                我方不会在本协议中增加与本次执行和解及法院办理程序无关的违约责任；
+                对于贵司提出的额外违约金、惩罚性责任或其他增加我方责任的条款，
+                我方亦不予接受。
+            </p>
+
+            <p>
+                双方应按照已经确认的协议文本及办理流程推进后续手续，
+                避免因增加与本案执行和解无关的条件而影响本案正常办理。
+            </p>
+
+
+            <p>
+                <strong>五、关于最终结清</strong>
+            </p>
+
+            <p>
+                执行法院按照相关执行程序完成人民币40,138.26元执行款项的划扣后，
+                双方确认，本执行案件已经纳入本协议最终结算范围的金钱给付事项全部结清。
+            </p>
+
+            <p>
+                甲方确认，
+                <strong>人民币40,138.26元</strong>
+                为本执行案件本次最终执行和解及最终结算金额。
+            </p>
+
+            <p>
+                对于已经纳入本协议最终结算范围的款项，
+                双方不得重复计算、重复主张或者再次申请执行。
+            </p>
+
+            <p>
+                本案后续由执行法院依法办理结案及相关执行措施解除手续。
+                双方应按照执行法院要求及时完成各自应当履行的配合义务。
+            </p>
+
+
+            <p>
+                <strong>六、关于协议签署及原件寄送</strong>
+            </p>
+
+            <p>
+                如贵司对上述执行和解金额、协议内容及办理流程无异议，
+                请于收到本邮件之日起五个工作日内，
+                即<strong>2026年10月9日前</strong>，
+                完成协议签署、盖章，并将双方已签署、盖章的协议原件各两份寄出。
+            </p>
+
+            <p>
+                我方将在贵司寄出协议原件当日，
+                同步寄出我方已签署的协议原件。
+            </p>
+
+            <p>
+                为便于双方及时完成原件寄送，
+                请贵司在回复本邮件时一并提供协议原件收件地址、收件人及联系电话。
+            </p>
+
+            <p>
+                双方各自寄送两份协议原件，
+                双方各持两份，以备后续办理及留存使用。
+            </p>
+
+
+            <p>
+                <strong>七、关于后续处理</strong>
+            </p>
+
+            <p>
+                上述协议及办理流程，
+                系根据双方已经确认的执行和解金额，
+                并结合执行法院于2026年9月22日明确的办理程序形成。
+            </p>
+
+            <p>
+                双方既已就人民币40,138.26元最终执行和解金额达成一致，
+                且执行法院已经就后续办理程序予以明确指导，
+                因此请双方按照上述确定的协议文本及办理流程完成后续手续。
+            </p>
+
+            <p>
+                如贵司对上述方案无异议，
+                请按照上述安排完成协议签署、盖章及原件寄送。
+            </p>
+
+            <p>
+                如在执行和解金额已经明确、执行法院办理程序已经明确的情况下，
+                贵司仍要求增加其他与本次执行和解及法院办理程序无关的条件，
+                导致协议无法签署，
+                则视为双方执行和解未能达成。
+            </p>
+
+            <p>
+                如双方最终未能完成执行和解协议签署，
+                我方将不再就已经明确的事项进行重复协商，
+                并依法通过执行异议及相关司法程序处理本案。
+            </p>
+
+            <p>
+                特此确认。
+            </p>
+
+            <p>
+                广东广泰律师事务所<br>
+                承办律师：王律师<br>
+                2026年9月24日
+            </p>
+        `,
+
+     attachments: [
+    {
+        name: "执行和解协议.pdf",
+        size: "3M",
+        url: "./files/执行和解协议.pdf",
+        action: "preview"
+    }
+]
+
+
+    },
+
+
+    /* =====================================================
+       已发送
+       2026-09-17 王律师邮件
+       
+       日期型 ID：
+       today-0917
+    ===================================================== */
+
+    "today-0917": {
 
         folder: "sent",
 
@@ -3089,93 +3472,13 @@ const mailData = {
 
     /* =====================================================
        已发送
-       2026-09-03 王律师邮件
-    ===================================================== */
-
-    yesterday: {
-
-        folder: "sent",
-
-        sender: "我",
-
-        address: "lawyerwang@beliefjustice.com",
-
-        avatar: "我",
-
-        date: "2026-09-03 16:45",
-
-        subject:
-            "关于（2026）粤0305执调11257号案件协商方案及结算时间的回复函",
-
-        preview:
-            "就贵司代理律师于2026年9月2日致电本律师，并提出本案“协商方案及结算时间”一事，现将我方协商方案及相关方案安排通过附件正式回复如下。",
-
-        unread: false,
-
-        body: `
-            <p>尊敬的贵司及代理律师：</p>
-
-            <p>
-                就贵司代理律师于2026年9月2日致电本律师，
-                并提出本案
-                <strong>“协商方案及结算时间”</strong>
-                一事，现将我方协商方案及相关方案安排通过附件正式回复如下。
-            </p>
-
-            <p>
-                随邮件附上：
-            </p>
-
-            <p>
-                《关于（2026）粤0305执调11257号案件协商方案及结算时间的回复函》；
-            </p>
-
-            <p>
-                请贵司结合附件所载协商方案及协议文本，
-                向贵司内部相关负责人同步并沟通确认，
-                并请于
-                <strong>2026年9月8日18:00前</strong>
-                就相关方案及协议文本是否同意予以书面反馈。
-            </p>
-
-            <p>
-                如贵司原则上认可上述方案，
-                我方可配合尽快推进协议确认及后续执行和解手续。
-            </p>
-
-            <p>
-                谢谢。
-            </p>
-
-            <p>
-                委托代理律师：<br>
-                王律师<br>
-                广东广泰律师事务所
-            </p>
-
-            <p>
-                lawyerwang@beliefjustice.com
-            </p>
-        `,
-
-        attachments: [
-
-            {
-                name: "关于本案协商方案及结算时间的回复函.pdf",
-                size: "2.1M"
-            }
-
-        ]
-
-    },
-
-
-    /* =====================================================
-       已发送
        2026-09-10 王律师邮件
+       
+       日期型 ID：
+       today-0910
     ===================================================== */
 
-    "case-update": {
+    "today-0910": {
 
         folder: "sent",
 
@@ -3304,10 +3607,99 @@ const mailData = {
 
     /* =====================================================
        已发送
-       2026-09-01 王律师邮件
+       2026-09-03 王律师邮件
+       
+       日期型 ID：
+       today-0903
     ===================================================== */
 
-    document: {
+    "today-0903": {
+
+        folder: "sent",
+
+        sender: "我",
+
+        address: "lawyerwang@beliefjustice.com",
+
+        avatar: "我",
+
+        date: "2026-09-03 16:45",
+
+        subject:
+            "关于（2026）粤0305执调11257号案件协商方案及结算时间的回复函",
+
+        preview:
+            "就贵司代理律师于2026年9月2日致电本律师，并提出本案“协商方案及结算时间”一事，现将我方协商方案及相关方案安排通过附件正式回复如下。",
+
+        unread: false,
+
+        body: `
+            <p>尊敬的贵司及代理律师：</p>
+
+            <p>
+                就贵司代理律师于2026年9月2日致电本律师，
+                并提出本案
+                <strong>“协商方案及结算时间”</strong>
+                一事，现将我方协商方案及相关方案安排通过附件正式回复如下。
+            </p>
+
+            <p>
+                随邮件附上：
+            </p>
+
+            <p>
+                《关于（2026）粤0305执调11257号案件协商方案及结算时间的回复函》；
+            </p>
+
+            <p>
+                请贵司结合附件所载协商方案及协议文本，
+                向贵司内部相关负责人同步并沟通确认，
+                并请于
+                <strong>2026年9月8日18:00前</strong>
+                就相关方案及协议文本是否同意予以书面反馈。
+            </p>
+
+            <p>
+                如贵司原则上认可上述方案，
+                我方可配合尽快推进协议确认及后续执行和解手续。
+            </p>
+
+            <p>
+                谢谢。
+            </p>
+
+            <p>
+                委托代理律师：<br>
+                王律师<br>
+                广东广泰律师事务所
+            </p>
+
+            <p>
+                lawyerwang@beliefjustice.com
+            </p>
+        `,
+
+        attachments: [
+
+            {
+                name: "关于本案协商方案及结算时间的回复函.pdf",
+                size: "2.1M"
+            }
+
+        ]
+
+    },
+
+
+    /* =====================================================
+       已发送
+       2026-09-01 王律师邮件
+       
+       日期型 ID：
+       today-0901
+    ===================================================== */
+
+    "today-0901": {
 
         folder: "sent",
 
@@ -3388,6 +3780,27 @@ const mailData = {
     }
 
 };
+/* =========================================================
+   邮件系统 JS
+   与新版 mailData 完全统一
+
+   mailData 使用：
+
+   peipei      = 收件箱 2026-09-17
+   today       = 已发送 2026-09-24
+   sept17      = 已发送 2026-09-17
+   yesterday   = 已发送 2026-09-03
+   case-update = 已发送 2026-09-10
+   document    = 已发送 2026-09-01
+
+   重要：
+   1. 不修改 mailData
+   2. 不修改 CSS
+   3. 不强制修改 mail-row 的 display
+   4. 使用 hidden 控制邮件显示
+   5. 不重复定义函数
+========================================================= */
+
 
 /* =========================================================
    当前状态
@@ -3401,20 +3814,225 @@ let toastTimer = null;
 
 
 /* =========================================================
+   邮件 ID 兼容映射
+   ---------------------------------------------------------
+   你的 mailData 现在使用：
+
+   peipei
+   today-0924
+   today-0917
+   today-0910
+   today-0903
+   today-0901
+
+   如果 HTML 旧代码仍然使用：
+
+   today
+   yesterday
+   case-update
+   document
+
+   这里自动转换，避免出现“找不到邮件”。
+========================================================= */
+
+const mailIdAlias = {
+
+    "today": "today-0924",
+
+    "yesterday": "today-0903",
+
+    "case-update": "today-0910",
+
+    "document": "today-0901"
+
+};
+
+
+/* =========================================================
+   统一解析邮件 ID
+========================================================= */
+
+function resolveMailId(mailId) {
+
+    if (!mailId) {
+        return null;
+    }
+
+
+    /*
+     * 新 ID 直接使用
+     */
+
+    if (
+        typeof mailData !== "undefined" &&
+        mailData[mailId]
+    ) {
+
+        return mailId;
+
+    }
+
+
+    /*
+     * 旧 ID 自动映射
+     */
+
+    if (
+        Object.prototype.hasOwnProperty.call(
+            mailIdAlias,
+            mailId
+        )
+    ) {
+
+        const mappedId =
+            mailIdAlias[mailId];
+
+
+        if (
+            typeof mailData !== "undefined" &&
+            mailData[mappedId]
+        ) {
+
+            return mappedId;
+
+        }
+
+    }
+
+
+    return null;
+
+}
+
+
+/* =========================================================
+   获取邮件
+========================================================= */
+
+function getMail(mailId) {
+
+    const resolvedId =
+        resolveMailId(mailId);
+
+
+    if (!resolvedId) {
+        return null;
+    }
+
+
+    return mailData[resolvedId] || null;
+
+}
+
+
+/* =========================================================
    页面初始化
 ========================================================= */
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
-    restoreDarkMode();
+        restoreDarkMode();
 
-    setupKeyboardShortcuts();
+        setupKeyboardShortcuts();
 
-    updateFolderNavigation();
+        normalizeMailRows();
 
-    renderCurrentFolder();
+        updateFolderNavigation();
 
-});
+        renderCurrentFolder();
+
+    }
+);
+
+
+/* =========================================================
+   统一修正 HTML 邮件行 ID
+   ---------------------------------------------------------
+   如果 HTML 中还是：
+
+   data-mail-id="today"
+
+   自动转换成：
+
+   data-mail-id="today-0924"
+
+   同时保留原始 ID 在 data-original-mail-id。
+========================================================= */
+
+function normalizeMailRows() {
+
+    const rows =
+        document.querySelectorAll(".mail-row");
+
+
+    rows.forEach(function (row) {
+
+        const originalId =
+            row.getAttribute("data-mail-id");
+
+
+        if (!originalId) {
+            return;
+        }
+
+
+        const resolvedId =
+            resolveMailId(originalId);
+
+
+        if (!resolvedId) {
+            return;
+        }
+
+
+        if (originalId !== resolvedId) {
+
+            row.setAttribute(
+                "data-original-mail-id",
+                originalId
+            );
+
+            row.setAttribute(
+                "data-mail-id",
+                resolvedId
+            );
+
+        }
+
+
+        /*
+         * 如果没有搜索文本，
+         * 自动根据 mailData 建立搜索文本。
+         */
+
+        if (!row.dataset.searchText) {
+
+            const mail =
+                mailData[resolvedId];
+
+
+            if (mail) {
+
+                row.dataset.searchText =
+                    [
+                        mail.sender,
+                        mail.address,
+                        mail.subject,
+                        mail.preview,
+                        stripHtml(mail.body)
+                    ]
+                    .join(" ")
+                    .toLowerCase();
+
+            }
+
+        }
+
+    });
+
+}
 
 
 /* =========================================================
@@ -3423,14 +4041,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function openMail(mailId) {
 
-    const mail = mailData[mailId];
+    /*
+     * 先解析 ID
+     */
 
-    if (!mail) {
+    const resolvedId =
+        resolveMailId(mailId);
+
+
+    /*
+     * 找不到 ID
+     */
+
+    if (!resolvedId) {
+
         showToast("找不到这封邮件");
+
         return;
+
     }
 
-    currentMailId = mailId;
+
+    /*
+     * 获取邮件
+     */
+
+    const mail =
+        mailData[resolvedId];
+
+
+    if (!mail) {
+
+        showToast("找不到这封邮件");
+
+        return;
+
+    }
+
+
+    /*
+     * 当前邮件统一保存真实 ID
+     */
+
+    currentMailId =
+        resolvedId;
 
 
     /* =====================================================
@@ -3438,10 +4092,16 @@ function openMail(mailId) {
     ====================================================== */
 
     const subject =
-        document.getElementById("mailModalSubject");
+        document.getElementById(
+            "mailModalSubject"
+        );
+
 
     if (subject) {
-        subject.textContent = mail.subject || "";
+
+        subject.textContent =
+            mail.subject || "";
+
     }
 
 
@@ -3450,10 +4110,16 @@ function openMail(mailId) {
     ====================================================== */
 
     const sender =
-        document.getElementById("mailModalSender");
+        document.getElementById(
+            "mailModalSender"
+        );
+
 
     if (sender) {
-        sender.textContent = mail.sender || "";
+
+        sender.textContent =
+            mail.sender || "";
+
     }
 
 
@@ -3462,10 +4128,16 @@ function openMail(mailId) {
     ====================================================== */
 
     const address =
-        document.getElementById("mailModalAddress");
+        document.getElementById(
+            "mailModalAddress"
+        );
+
 
     if (address) {
-        address.textContent = mail.address || "";
+
+        address.textContent =
+            mail.address || "";
+
     }
 
 
@@ -3474,11 +4146,18 @@ function openMail(mailId) {
     ====================================================== */
 
     const date =
-        document.getElementById("mailModalDate");
+        document.getElementById(
+            "mailModalDate"
+        );
+
 
     if (date) {
+
         date.textContent =
-            formatDetailDate(mail.date);
+            formatDetailDate(
+                mail.date
+            );
+
     }
 
 
@@ -3487,10 +4166,16 @@ function openMail(mailId) {
     ====================================================== */
 
     const avatar =
-        document.getElementById("mailModalAvatar");
+        document.getElementById(
+            "mailModalAvatar"
+        );
+
 
     if (avatar) {
-        avatar.textContent = mail.avatar || "";
+
+        avatar.textContent =
+            mail.avatar || "";
+
     }
 
 
@@ -3499,10 +4184,16 @@ function openMail(mailId) {
     ====================================================== */
 
     const body =
-        document.getElementById("mailModalBody");
+        document.getElementById(
+            "mailModalBody"
+        );
+
 
     if (body) {
-        body.innerHTML = mail.body || "";
+
+        body.innerHTML =
+            mail.body || "";
+
     }
 
 
@@ -3510,7 +4201,9 @@ function openMail(mailId) {
        附件
     ====================================================== */
 
-    renderAttachments(mail.attachments);
+    renderAttachments(
+        mail.attachments
+    );
 
 
     /* =====================================================
@@ -3521,16 +4214,25 @@ function openMail(mailId) {
 
         mail.unread = false;
 
+
         const row =
             document.querySelector(
-                `.mail-row[data-mail-id="${CSS.escape(mailId)}"]`
+                `.mail-row[data-mail-id="${CSS.escape(resolvedId)}"]`
             );
 
+
         if (row) {
-            row.classList.remove("unread");
+
+            row.classList.remove(
+                "unread"
+            );
+
         }
 
+
         updateUnreadCount();
+
+        updateFolderCounts();
 
     }
 
@@ -3540,13 +4242,23 @@ function openMail(mailId) {
     ====================================================== */
 
     const modal =
-        document.getElementById("mailModal");
+        document.getElementById(
+            "mailModal"
+        );
+
 
     if (modal) {
-        modal.classList.add("show");
+
+        modal.classList.add(
+            "show"
+        );
+
     }
 
-    document.body.classList.add("modal-open");
+
+    document.body.classList.add(
+        "modal-open"
+    );
 
 }
 
@@ -3558,13 +4270,24 @@ function openMail(mailId) {
 function closeMail() {
 
     const modal =
-        document.getElementById("mailModal");
+        document.getElementById(
+            "mailModal"
+        );
+
 
     if (modal) {
-        modal.classList.remove("show");
+
+        modal.classList.remove(
+            "show"
+        );
+
     }
 
-    document.body.classList.remove("modal-open");
+
+    document.body.classList.remove(
+        "modal-open"
+    );
+
 
     currentMailId = null;
 
@@ -3577,8 +4300,14 @@ function closeMail() {
 
 function handleModalBackground(event) {
 
-    if (event.target.id === "mailModal") {
+    if (
+        event &&
+        event.target &&
+        event.target.id === "mailModal"
+    ) {
+
         closeMail();
+
     }
 
 }
@@ -3586,94 +4315,125 @@ function handleModalBackground(event) {
 
 /* =========================================================
    附件
+   ---------------------------------------------------------
+   修改：
+   “下载”按钮改为“预览”
 ========================================================= */
 
 function renderAttachments(attachments) {
 
     const container =
-        document.getElementById("mailAttachments");
+        document.getElementById(
+            "mailAttachments"
+        );
+
 
     const list =
-        document.getElementById("attachmentList");
+        document.getElementById(
+            "attachmentList"
+        );
 
 
     if (!container || !list) {
+
         return;
+
     }
 
 
     list.innerHTML = "";
 
 
-    if (!attachments || attachments.length === 0) {
+    if (
+        !attachments ||
+        attachments.length === 0
+    ) {
 
         container.hidden = true;
 
         return;
+
     }
 
 
     container.hidden = false;
 
 
-    attachments.forEach(function (file, index) {
+    attachments.forEach(
+        function (file, index) {
 
-        const item =
-            document.createElement("div");
+            const item =
+                document.createElement(
+                    "div"
+                );
 
-        item.className =
-            "attachment-item";
+
+            item.className =
+                "attachment-item";
 
 
-        item.innerHTML = `
+            item.innerHTML = `
 
-            <div class="attachment-icon">
-                📎
-            </div>
+                <div class="attachment-icon">
+                    📎
+                </div>
 
-            <div class="attachment-name">
-                ${escapeHtml(file.name)}
-                <span
-                    style="
-                        color:var(--muted);
-                        margin-left:5px;
-                    "
+                <div class="attachment-name">
+                    ${escapeHtml(file.name)}
+
+                    <span
+                        style="
+                            color:var(--muted);
+                            margin-left:5px;
+                        "
+                    >
+                        ${escapeHtml(file.size || "")}
+                    </span>
+                </div>
+
+                <button
+                    class="attachment-download"
+                    type="button"
+                    onclick="previewAttachment(${index})"
                 >
-                    ${escapeHtml(file.size)}
-                </span>
-            </div>
+                    预览
+                </button>
 
-            <button
-                class="attachment-download"
-                type="button"
-                onclick="downloadAttachment(${index})"
-            >
-                下载
-            </button>
-
-        `;
+            `;
 
 
-        list.appendChild(item);
+            list.appendChild(item);
 
-    });
+        }
+    );
 
 }
 
 
 /* =========================================================
-   附件下载
+   附件预览
+   ---------------------------------------------------------
+   PDF 文件直接在新标签页打开。
+
+   例如：
+
+   ./files/执行和解协议.pdf
+
+   浏览器会使用自己的 PDF 阅读器进行预览，
+   不会调用下载逻辑。
 ========================================================= */
 
-function downloadAttachment(index) {
+function previewAttachment(index) {
 
     if (!currentMailId) {
+
         return;
+
     }
 
 
     const mail =
-        mailData[currentMailId];
+        getMail(currentMailId);
 
 
     if (
@@ -3681,7 +4441,11 @@ function downloadAttachment(index) {
         !mail.attachments ||
         !mail.attachments[index]
     ) {
+
+        showToast("找不到附件");
+
         return;
+
     }
 
 
@@ -3689,9 +4453,41 @@ function downloadAttachment(index) {
         mail.attachments[index];
 
 
-    showToast(
-        `已准备下载：${file.name}`
-    );
+    if (!file.url) {
+
+        showToast(
+            "该附件暂未设置预览文件"
+        );
+
+        return;
+
+    }
+
+
+    /*
+     * 在新标签页打开附件
+     */
+
+    const previewWindow =
+        window.open(
+            file.url,
+            "_blank",
+            "noopener,noreferrer"
+        );
+
+
+    /*
+     * 如果浏览器阻止弹出窗口，
+     * 给用户提示。
+     */
+
+    if (!previewWindow) {
+
+        showToast(
+            "浏览器阻止了预览窗口，请允许弹出窗口"
+        );
+
+    }
 
 }
 
@@ -3702,26 +4498,54 @@ function downloadAttachment(index) {
 
 function toggleStar(mailId) {
 
+    const resolvedId =
+        resolveMailId(mailId);
+
+
+    if (!resolvedId) {
+
+        return;
+
+    }
+
+
     const button =
+        document.querySelector(
+            `[data-star-id="${CSS.escape(resolvedId)}"]`
+        );
+
+
+    /*
+     * 兼容旧 HTML
+     */
+
+    const fallbackButton =
+        button ||
         document.querySelector(
             `[data-star-id="${CSS.escape(mailId)}"]`
         );
 
 
-    if (!button) {
+    if (!fallbackButton) {
+
         return;
+
     }
 
 
     const active =
-        button.classList.toggle("active");
+        fallbackButton.classList.toggle(
+            "active"
+        );
 
 
-    button.textContent =
-        active ? "★" : "☆";
+    fallbackButton.textContent =
+        active
+            ? "★"
+            : "☆";
 
 
-    button.title =
+    fallbackButton.title =
         active
             ? "取消星标"
             : "标记星标";
@@ -3742,40 +4566,80 @@ function toggleStar(mailId) {
 
 function deleteMail(mailId) {
 
+    const resolvedId =
+        resolveMailId(mailId);
+
+
+    if (!resolvedId) {
+
+        showToast("找不到这封邮件");
+
+        return;
+
+    }
+
+
     const row =
+        document.querySelector(
+            `.mail-row[data-mail-id="${CSS.escape(resolvedId)}"]`
+        );
+
+
+    /*
+     * 如果 HTML 还没被 normalize，
+     * 再尝试原始 ID。
+     */
+
+    const fallbackRow =
+        row ||
         document.querySelector(
             `.mail-row[data-mail-id="${CSS.escape(mailId)}"]`
         );
 
 
-    if (!row) {
+    if (!fallbackRow) {
+
         return;
+
     }
 
 
-    row.style.opacity = "0";
+    fallbackRow.style.opacity =
+        "0";
 
-    row.style.transform =
+
+    fallbackRow.style.transform =
         "translateX(30px)";
 
 
-    setTimeout(function () {
+    setTimeout(
+        function () {
 
-        row.remove();
+            fallbackRow.remove();
 
-        updateUnreadCount();
+            updateUnreadCount();
 
-        updateFolderCounts();
+            updateFolderCounts();
 
-        updateEmptyState();
+            updateFolderEmptyState(
+                currentFolder
+            );
 
-        showToast("邮件已移至垃圾箱");
+            showToast(
+                "邮件已移至垃圾箱"
+            );
 
-    }, 250);
+        },
+        250
+    );
 
 
-    if (currentMailId === mailId) {
+    if (
+        currentMailId === resolvedId
+    ) {
+
         closeMail();
+
     }
 
 }
@@ -3788,7 +4652,9 @@ function deleteMail(mailId) {
 function deleteCurrentMail() {
 
     if (!currentMailId) {
+
         return;
+
     }
 
 
@@ -3809,40 +4675,75 @@ function deleteCurrentMail() {
 
 function archiveMail(mailId) {
 
+    const resolvedId =
+        resolveMailId(mailId);
+
+
+    if (!resolvedId) {
+
+        showToast("找不到这封邮件");
+
+        return;
+
+    }
+
+
     const row =
+        document.querySelector(
+            `.mail-row[data-mail-id="${CSS.escape(resolvedId)}"]`
+        );
+
+
+    const fallbackRow =
+        row ||
         document.querySelector(
             `.mail-row[data-mail-id="${CSS.escape(mailId)}"]`
         );
 
 
-    if (!row) {
+    if (!fallbackRow) {
+
         return;
+
     }
 
 
-    row.style.opacity = "0";
+    fallbackRow.style.opacity =
+        "0";
 
-    row.style.transform =
+
+    fallbackRow.style.transform =
         "translateX(-30px)";
 
 
-    setTimeout(function () {
+    setTimeout(
+        function () {
 
-        row.remove();
+            fallbackRow.remove();
 
-        updateUnreadCount();
+            updateUnreadCount();
 
-        updateFolderCounts();
+            updateFolderCounts();
 
-        updateEmptyState();
+            updateFolderEmptyState(
+                currentFolder
+            );
 
-        showToast("邮件已归档");
+            showToast(
+                "邮件已归档"
+            );
 
-    }, 250);
+        },
+        250
+    );
 
 
-    if (currentMailId === mailId) {
+    if (
+        currentMailId === resolvedId
+    ) {
+
         closeMail();
+
     }
 
 }
@@ -3855,7 +4756,9 @@ function archiveMail(mailId) {
 function archiveCurrentMail() {
 
     if (!currentMailId) {
+
         return;
+
     }
 
 
@@ -3871,295 +4774,10 @@ function archiveCurrentMail() {
 
 
 /* =========================================================
-   更新文件夹数量
-========================================================= */
-
-function updateFolderCounts() {
-
-    const rows =
-        document.querySelectorAll(".mail-row");
-
-
-    let inboxTotal = 0;
-
-    let sentTotal = 0;
-
-    let inboxUnread = 0;
-
-
-    rows.forEach(function (row) {
-
-        const folder =
-            row.getAttribute("data-folder") ||
-            "inbox";
-
-
-        if (folder === "inbox") {
-
-            inboxTotal++;
-
-
-            if (
-                row.classList.contains("unread")
-            ) {
-
-                inboxUnread++;
-
-            }
-
-        }
-
-
-        if (folder === "sent") {
-
-            sentTotal++;
-
-        }
-
-    });
-
-
-    /* =====================================================
-       收件箱数量
-    ====================================================== */
-
-    const unreadElement =
-        document.getElementById("unreadCount");
-
-
-    if (unreadElement) {
-
-        unreadElement.textContent =
-            inboxUnread > 0
-                ? inboxUnread
-                : "";
-
-    }
-
-
-    /* =====================================================
-       已发送数量
-    ====================================================== */
-
-    const sentElement =
-        document.getElementById("sentCount");
-
-
-    if (sentElement) {
-
-        sentElement.textContent =
-            sentTotal > 0
-                ? sentTotal
-                : "";
-
-    }
-
-
-    return {
-        inboxTotal,
-        sentTotal,
-        inboxUnread
-    };
-
-}
-
-
-/* =========================================================
-   未读数量
-========================================================= */
-
-function updateUnreadCount() {
-
-    const rows =
-        document.querySelectorAll(
-            '.mail-row[data-folder="inbox"]'
-        );
-
-
-    let count = 0;
-
-
-    rows.forEach(function (row) {
-
-        if (
-            row.classList.contains("unread")
-        ) {
-
-            count++;
-
-        }
-
-    });
-
-
-    const unreadElement =
-        document.getElementById("unreadCount");
-
-
-    if (unreadElement) {
-
-        unreadElement.textContent =
-            count > 0
-                ? count
-                : "";
-
-    }
-
-
-    const inboxCount =
-        document.getElementById("inboxCount");
-
-
-    if (inboxCount) {
-
-        if (currentFolder === "inbox") {
-
-            inboxCount.textContent =
-                count === 0
-                    ? "没有未读邮件"
-                    : `${count} 封未读`;
-
-        }
-
-    }
-
-}
-
-
-/* =========================================================
-   更新空状态
-========================================================= */
-
-function updateEmptyState() {
-
-    const inboxView =
-        document.getElementById("inboxView");
-
-    const sentView =
-        document.getElementById("sentView");
-
-
-    /*
-     * 收件箱空状态
-     */
-
-    const inboxEmpty =
-        inboxView
-            ? inboxView.querySelector("#emptyState")
-            : null;
-
-
-    if (inboxEmpty) {
-
-        const inboxRows =
-            inboxView.querySelectorAll(
-                '.mail-row[data-folder="inbox"]'
-            );
-
-
-        let visibleCount = 0;
-
-
-        inboxRows.forEach(function (row) {
-
-            if (row.style.display !== "none") {
-
-                visibleCount++;
-
-            }
-
-        });
-
-
-        inboxEmpty.hidden =
-            visibleCount !== 0;
-
-    }
-
-
-    /*
-     * 已发送空状态
-     */
-
-    const sentEmpty =
-        document.getElementById("sentEmptyState");
-
-
-    if (sentEmpty) {
-
-        const sentRows =
-            document.querySelectorAll(
-                '#sentView .mail-row[data-folder="sent"]'
-            );
-
-
-        let visibleCount = 0;
-
-
-        sentRows.forEach(function (row) {
-
-            if (row.style.display !== "none") {
-
-                visibleCount++;
-
-            }
-
-        });
-
-
-        sentEmpty.hidden =
-            visibleCount !== 0;
-
-    }
-
-}
-
-
-/* =========================================================
-   文件夹导航状态
-========================================================= */
-
-function updateFolderNavigation() {
-
-    const inboxNav =
-        document.getElementById("inboxNav");
-
-
-    const sentNav =
-        document.getElementById("sentNav");
-
-
-    if (inboxNav) {
-
-        inboxNav.classList.toggle(
-            "active",
-            currentFolder === "inbox"
-        );
-
-    }
-
-
-    if (sentNav) {
-
-        sentNav.classList.toggle(
-            "active",
-            currentFolder === "sent"
-        );
-
-    }
-
-}
-
-
-/* =========================================================
    更新文件夹统计数量
 ========================================================= */
 
 function updateFolderCounts() {
-
-    /*
-     * 收件箱总数
-     */
 
     const inboxRows =
         document.querySelectorAll(
@@ -4167,43 +4785,40 @@ function updateFolderCounts() {
         );
 
 
-    /*
-     * 已发送总数
-     */
-
     const sentRows =
         document.querySelectorAll(
             '#sentView .mail-row[data-folder="sent"]'
         );
 
 
-    /*
-     * 收件箱未读数量
-     */
-
     let inboxUnread = 0;
 
 
-    inboxRows.forEach(function (row) {
+    inboxRows.forEach(
+        function (row) {
 
-        if (
-            row.classList.contains("unread") &&
-            row.style.display !== "none"
-        ) {
+            if (
+                row.classList.contains(
+                    "unread"
+                )
+            ) {
 
-            inboxUnread++;
+                inboxUnread++;
+
+            }
 
         }
+    );
 
-    });
 
-
-    /*
-     * 左侧收件箱数量
-     */
+    /* =====================================================
+       左侧收件箱未读
+    ====================================================== */
 
     const unreadElement =
-        document.getElementById("unreadCount");
+        document.getElementById(
+            "unreadCount"
+        );
 
 
     if (unreadElement) {
@@ -4216,12 +4831,14 @@ function updateFolderCounts() {
     }
 
 
-    /*
-     * 左侧已发送数量
-     */
+    /* =====================================================
+       左侧已发送
+    ====================================================== */
 
     const sentElement =
-        document.getElementById("sentCount");
+        document.getElementById(
+            "sentCount"
+        );
 
 
     if (sentElement) {
@@ -4234,12 +4851,14 @@ function updateFolderCounts() {
     }
 
 
-    /*
-     * 已发送页面顶部数量
-     */
+    /* =====================================================
+       已发送页面顶部
+    ====================================================== */
 
     const sentViewCount =
-        document.getElementById("sentViewCount");
+        document.getElementById(
+            "sentViewCount"
+        );
 
 
     if (sentViewCount) {
@@ -4283,22 +4902,27 @@ function updateUnreadCount() {
     let count = 0;
 
 
-    rows.forEach(function (row) {
+    rows.forEach(
+        function (row) {
 
-        if (
-            row.classList.contains("unread") &&
-            row.style.display !== "none"
-        ) {
+            if (
+                row.classList.contains(
+                    "unread"
+                )
+            ) {
 
-            count++;
+                count++;
+
+            }
 
         }
-
-    });
+    );
 
 
     const unreadElement =
-        document.getElementById("unreadCount");
+        document.getElementById(
+            "unreadCount"
+        );
 
 
     if (unreadElement) {
@@ -4312,7 +4936,9 @@ function updateUnreadCount() {
 
 
     const inboxCount =
-        document.getElementById("inboxCount");
+        document.getElementById(
+            "inboxCount"
+        );
 
 
     if (
@@ -4331,7 +4957,24 @@ function updateUnreadCount() {
 
 
 /* =========================================================
-   更新当前文件夹空状态
+   更新空状态
+========================================================= */
+
+function updateEmptyState() {
+
+    updateFolderEmptyState(
+        "inbox"
+    );
+
+    updateFolderEmptyState(
+        "sent"
+    );
+
+}
+
+
+/* =========================================================
+   当前文件夹空状态
 ========================================================= */
 
 function updateFolderEmptyState(folder) {
@@ -4339,7 +4982,9 @@ function updateFolderEmptyState(folder) {
     if (folder === "inbox") {
 
         const empty =
-            document.getElementById("emptyState");
+            document.getElementById(
+                "emptyState"
+            );
 
 
         const rows =
@@ -4351,15 +4996,20 @@ function updateFolderEmptyState(folder) {
         let visibleCount = 0;
 
 
-        rows.forEach(function (row) {
+        rows.forEach(
+            function (row) {
 
-            if (row.style.display !== "none") {
+                if (
+                    row.style.display !==
+                    "none"
+                ) {
 
-                visibleCount++;
+                    visibleCount++;
+
+                }
 
             }
-
-        });
+        );
 
 
         if (empty) {
@@ -4369,14 +5019,18 @@ function updateFolderEmptyState(folder) {
 
         }
 
+
         return;
+
     }
 
 
     if (folder === "sent") {
 
         const empty =
-            document.getElementById("sentEmptyState");
+            document.getElementById(
+                "sentEmptyState"
+            );
 
 
         const rows =
@@ -4388,15 +5042,20 @@ function updateFolderEmptyState(folder) {
         let visibleCount = 0;
 
 
-        rows.forEach(function (row) {
+        rows.forEach(
+            function (row) {
 
-            if (row.style.display !== "none") {
+                if (
+                    row.style.display !==
+                    "none"
+                ) {
 
-                visibleCount++;
+                    visibleCount++;
+
+                }
 
             }
-
-        });
+        );
 
 
         if (empty) {
@@ -4412,17 +5071,68 @@ function updateFolderEmptyState(folder) {
 
 
 /* =========================================================
+   文件夹导航状态
+========================================================= */
+
+function updateFolderNavigation() {
+
+    const inboxNav =
+        document.getElementById(
+            "inboxNav"
+        );
+
+
+    const sentNav =
+        document.getElementById(
+            "sentNav"
+        );
+
+
+    if (inboxNav) {
+
+        inboxNav.classList.toggle(
+            "active",
+            currentFolder === "inbox"
+        );
+
+    }
+
+
+    if (sentNav) {
+
+        sentNav.classList.toggle(
+            "active",
+            currentFolder === "sent"
+        );
+
+    }
+
+}
+
+
+/* =========================================================
    渲染当前文件夹
 ========================================================= */
 
 function renderCurrentFolder() {
 
     const inboxView =
-        document.getElementById("inboxView");
+        document.getElementById(
+            "inboxView"
+        );
 
 
     const sentView =
-        document.getElementById("sentView");
+        document.getElementById(
+            "sentView"
+        );
+
+
+    /*
+     * 先修正邮件行 ID
+     */
+
+    normalizeMailRows();
 
 
     /*
@@ -4470,11 +5180,13 @@ function renderCurrentFolder() {
 
 
     /*
-     * 更新当前文件夹内部邮件显示
+     * 当前文件夹邮件
      */
 
     const rows =
-        document.querySelectorAll(".mail-row");
+        document.querySelectorAll(
+            ".mail-row"
+        );
 
 
     let visibleCount = 0;
@@ -4482,39 +5194,45 @@ function renderCurrentFolder() {
     let visibleUnread = 0;
 
 
-    rows.forEach(function (row) {
+    rows.forEach(
+        function (row) {
 
-        const folder =
-            row.getAttribute("data-folder") ||
-            "inbox";
-
-
-        const shouldShow =
-            folder === currentFolder;
-
-
-        row.style.display =
-            shouldShow
-                ? ""
-                : "none";
+            const folder =
+                row.getAttribute(
+                    "data-folder"
+                ) ||
+                "inbox";
 
 
-        if (shouldShow) {
+            const shouldShow =
+                folder === currentFolder;
 
-            visibleCount++;
+
+            row.style.display =
+                shouldShow
+                    ? ""
+                    : "none";
 
 
-            if (
-                row.classList.contains("unread")
-            ) {
+            if (shouldShow) {
 
-                visibleUnread++;
+                visibleCount++;
+
+
+                if (
+                    row.classList.contains(
+                        "unread"
+                    )
+                ) {
+
+                    visibleUnread++;
+
+                }
 
             }
 
         }
-
-    });
+    );
 
 
     /*
@@ -4532,7 +5250,7 @@ function renderCurrentFolder() {
 
 
     /*
-     * 当前页面顶部标题
+     * 当前页面标题
      */
 
     const currentView =
@@ -4543,7 +5261,9 @@ function renderCurrentFolder() {
 
     const title =
         currentView
-            ? currentView.querySelector(".inbox-title")
+            ? currentView.querySelector(
+                ".inbox-title"
+            )
             : null;
 
 
@@ -4562,12 +5282,16 @@ function renderCurrentFolder() {
      */
 
     const inboxCount =
-        document.getElementById("inboxCount");
+        document.getElementById(
+            "inboxCount"
+        );
 
 
     if (inboxCount) {
 
-        if (currentFolder === "inbox") {
+        if (
+            currentFolder === "inbox"
+        ) {
 
             inboxCount.textContent =
                 visibleUnread === 0
@@ -4589,7 +5313,9 @@ function renderCurrentFolder() {
      */
 
     const sentViewCount =
-        document.getElementById("sentViewCount");
+        document.getElementById(
+            "sentViewCount"
+        );
 
 
     if (sentViewCount) {
@@ -4612,7 +5338,9 @@ function renderCurrentFolder() {
      * 空状态
      */
 
-    updateFolderEmptyState(currentFolder);
+    updateFolderEmptyState(
+        currentFolder
+    );
 
 }
 
@@ -4623,26 +5351,23 @@ function renderCurrentFolder() {
 
 function goInbox() {
 
-    currentFolder = "inbox";
+    currentFolder =
+        "inbox";
 
-
-    /*
-     * 清除搜索
-     */
 
     clearSearch();
 
 
-    /*
-     * 显示收件箱
-     */
-
     const inboxView =
-        document.getElementById("inboxView");
+        document.getElementById(
+            "inboxView"
+        );
 
 
     const sentView =
-        document.getElementById("sentView");
+        document.getElementById(
+            "sentView"
+        );
 
 
     if (inboxView) {
@@ -4659,21 +5384,13 @@ function goInbox() {
     }
 
 
-    /*
-     * 重新渲染
-     */
-
     renderCurrentFolder();
-
-
-    /*
-     * 导航状态
-     */
 
     updateFolderNavigation();
 
-
-    showToast("已返回收件箱");
+    showToast(
+        "已返回收件箱"
+    );
 
 
     closeMobileSidebar();
@@ -4687,26 +5404,23 @@ function goInbox() {
 
 function goSent() {
 
-    currentFolder = "sent";
+    currentFolder =
+        "sent";
 
-
-    /*
-     * 清空搜索框
-     */
 
     clearSearch();
 
 
-    /*
-     * 显示已发送
-     */
-
     const inboxView =
-        document.getElementById("inboxView");
+        document.getElementById(
+            "inboxView"
+        );
 
 
     const sentView =
-        document.getElementById("sentView");
+        document.getElementById(
+            "sentView"
+        );
 
 
     if (inboxView) {
@@ -4723,23 +5437,10 @@ function goSent() {
     }
 
 
-    /*
-     * 重新渲染当前文件夹
-     */
-
     renderCurrentFolder();
-
-
-    /*
-     * 更新导航高亮
-     */
 
     updateFolderNavigation();
 
-
-    /*
-     * 已发送数量
-     */
 
     const sentRows =
         document.querySelectorAll(
@@ -4748,7 +5449,9 @@ function goSent() {
 
 
     const sentViewCount =
-        document.getElementById("sentViewCount");
+        document.getElementById(
+            "sentViewCount"
+        );
 
 
     if (sentViewCount) {
@@ -4761,19 +5464,15 @@ function goSent() {
     }
 
 
-    /*
-     * 更新已发送空状态
-     */
-
-    updateFolderEmptyState("sent");
+    updateFolderEmptyState(
+        "sent"
+    );
 
 
-    showToast("已打开已发送邮件");
+    showToast(
+        "已打开已发送邮件"
+    );
 
-
-    /*
-     * 移动端关闭侧栏
-     */
 
     closeMobileSidebar();
 
@@ -4787,7 +5486,9 @@ function goSent() {
 function clearSearch() {
 
     const search =
-        document.getElementById("searchInput");
+        document.getElementById(
+            "searchInput"
+        );
 
 
     if (search) {
@@ -4798,43 +5499,50 @@ function clearSearch() {
 
 
     const results =
-        document.getElementById("searchResults");
+        document.getElementById(
+            "searchResults"
+        );
 
 
     if (results) {
 
         results.innerHTML = "";
 
-        results.classList.remove("show");
+        results.classList.remove(
+            "show"
+        );
 
     }
 
 
-    /*
-     * 清除搜索后，
-     * 恢复当前文件夹的所有邮件
-     */
-
     const rows =
-        document.querySelectorAll(".mail-row");
+        document.querySelectorAll(
+            ".mail-row"
+        );
 
 
-    rows.forEach(function (row) {
+    rows.forEach(
+        function (row) {
 
-        const folder =
-            row.getAttribute("data-folder") ||
-            "inbox";
-
-
-        row.style.display =
-            folder === currentFolder
-                ? ""
-                : "none";
-
-    });
+            const folder =
+                row.getAttribute(
+                    "data-folder"
+                ) ||
+                "inbox";
 
 
-    updateFolderEmptyState(currentFolder);
+            row.style.display =
+                folder === currentFolder
+                    ? ""
+                    : "none";
+
+        }
+    );
+
+
+    updateFolderEmptyState(
+        currentFolder
+    );
 
 }
 
@@ -4850,23 +5558,31 @@ function closeMobileSidebar() {
     ) {
 
         const sidebar =
-            document.getElementById("sidebar");
+            document.getElementById(
+                "sidebar"
+            );
 
 
         const overlay =
-            document.getElementById("overlay");
+            document.getElementById(
+                "overlay"
+            );
 
 
         if (sidebar) {
 
-            sidebar.classList.remove("open");
+            sidebar.classList.remove(
+                "open"
+            );
 
         }
 
 
         if (overlay) {
 
-            overlay.classList.remove("show");
+            overlay.classList.remove(
+                "show"
+            );
 
         }
 
@@ -4882,48 +5598,63 @@ function closeMobileSidebar() {
 function handleSearch(keyword) {
 
     const value =
-        keyword.trim().toLowerCase();
+        String(keyword || "")
+            .trim()
+            .toLowerCase();
 
 
     const rows =
-        document.querySelectorAll(".mail-row");
+        document.querySelectorAll(
+            ".mail-row"
+        );
 
 
     const results =
-        document.getElementById("searchResults");
+        document.getElementById(
+            "searchResults"
+        );
 
 
     /*
-     * 没有搜索关键词
+     * 没有关键词
      */
 
     if (!value) {
 
-        rows.forEach(function (row) {
+        rows.forEach(
+            function (row) {
 
-            const folder =
-                row.getAttribute("data-folder") ||
-                "inbox";
+                const folder =
+                    row.getAttribute(
+                        "data-folder"
+                    ) ||
+                    "inbox";
 
 
-            row.style.display =
-                folder === currentFolder
-                    ? ""
-                    : "none";
+                row.style.display =
+                    folder === currentFolder
+                        ? ""
+                        : "none";
 
-        });
+            }
+        );
 
 
         if (results) {
 
             results.innerHTML = "";
 
-            results.classList.remove("show");
+            results.classList.remove(
+                "show"
+            );
 
         }
 
 
-        updateFolderEmptyState(currentFolder);
+        updateFolderEmptyState(
+            currentFolder
+        );
+
 
         updateFolderCounts();
 
@@ -4937,47 +5668,90 @@ function handleSearch(keyword) {
     let found = 0;
 
 
-    rows.forEach(function (row) {
+    rows.forEach(
+        function (row) {
 
-        const folder =
-            row.getAttribute("data-folder") ||
-            "inbox";
-
-
-        /*
-         * 搜索只搜索当前文件夹
-         */
-
-        if (
-            folder !== currentFolder
-        ) {
-
-            row.style.display = "none";
-
-            return;
-
-        }
+            const folder =
+                row.getAttribute(
+                    "data-folder"
+                ) ||
+                "inbox";
 
 
-        const text =
-            (
-                row.dataset.searchText ||
-                row.textContent ||
-                ""
-            ).toLowerCase();
+            /*
+             * 只搜索当前文件夹
+             */
+
+            if (
+                folder !== currentFolder
+            ) {
+
+                row.style.display =
+                    "none";
+
+                return;
+
+            }
 
 
-        const matched =
-            text.includes(value);
+            /*
+             * 确保有搜索文本
+             */
+
+            let text =
+                (
+                    row.dataset.searchText ||
+                    row.textContent ||
+                    ""
+                ).toLowerCase();
 
 
-        row.style.display =
-            matched
-                ? ""
-                : "none";
+            /*
+             * 如果 data-search-text 不完整，
+             * 再从 mailData 中补充。
+             */
+
+            const rowId =
+                row.dataset.mailId;
 
 
-        if (matched) {
+            const mail =
+                getMail(rowId);
+
+
+            if (mail) {
+
+                text =
+                    [
+                        text,
+                        mail.sender,
+                        mail.address,
+                        mail.subject,
+                        mail.preview,
+                        stripHtml(mail.body)
+                    ]
+                    .join(" ")
+                    .toLowerCase();
+
+            }
+
+
+            const matched =
+                text.includes(value);
+
+
+            row.style.display =
+                matched
+                    ? ""
+                    : "none";
+
+
+            if (!matched) {
+
+                return;
+
+            }
+
 
             found++;
 
@@ -4986,47 +5760,51 @@ function handleSearch(keyword) {
                 row.dataset.mailId;
 
 
-            const mail =
-                mailData[id];
+            const foundMail =
+                getMail(id);
 
 
-            if (mail) {
+            if (!foundMail) {
 
-                resultHtml += `
-
-                    <div
-                        class="search-result"
-                        onclick="openSearchResult('${escapeJs(id)}')"
-                    >
-
-                        <div class="search-result-title">
-                            ${escapeHtml(mail.subject)}
-                        </div>
-
-                        <div class="search-result-meta">
-                            ${escapeHtml(mail.sender)}
-                            ·
-                            ${escapeHtml(mail.date)}
-                        </div>
-
-                        <div class="search-result-preview">
-                            ${escapeHtml(mail.preview)}
-                        </div>
-
-                    </div>
-
-                `;
+                return;
 
             }
 
-        }
 
-    });
+            resultHtml += `
+
+                <div
+                    class="search-result"
+                    onclick="openSearchResult('${escapeJs(id)}')"
+                >
+
+                    <div class="search-result-title">
+                        ${escapeHtml(foundMail.subject)}
+                    </div>
+
+                    <div class="search-result-meta">
+                        ${escapeHtml(foundMail.sender)}
+                        ·
+                        ${escapeHtml(foundMail.date)}
+                    </div>
+
+                    <div class="search-result-preview">
+                        ${escapeHtml(foundMail.preview)}
+                    </div>
+
+                </div>
+
+            `;
+
+        }
+    );
 
 
     if (!results) {
 
-        updateFolderEmptyState(currentFolder);
+        updateFolderEmptyState(
+            currentFolder
+        );
 
         return;
 
@@ -5034,7 +5812,7 @@ function handleSearch(keyword) {
 
 
     /*
-     * 显示搜索结果
+     * 找到
      */
 
     if (found > 0) {
@@ -5042,9 +5820,19 @@ function handleSearch(keyword) {
         results.innerHTML =
             resultHtml;
 
-        results.classList.add("show");
 
-    } else {
+        results.classList.add(
+            "show"
+        );
+
+    }
+
+
+    /*
+     * 没找到
+     */
+
+    else {
 
         results.innerHTML = `
 
@@ -5065,12 +5853,17 @@ function handleSearch(keyword) {
 
         `;
 
-        results.classList.add("show");
+
+        results.classList.add(
+            "show"
+        );
 
     }
 
 
-    updateFolderEmptyState(currentFolder);
+    updateFolderEmptyState(
+        currentFolder
+    );
 
 }
 
@@ -5081,19 +5874,40 @@ function handleSearch(keyword) {
 
 function openSearchResult(mailId) {
 
+    const resolvedId =
+        resolveMailId(mailId);
+
+
+    if (!resolvedId) {
+
+        showToast(
+            "找不到这封邮件"
+        );
+
+        return;
+
+    }
+
+
     const results =
-        document.getElementById("searchResults");
+        document.getElementById(
+            "searchResults"
+        );
 
 
     if (results) {
 
-        results.classList.remove("show");
+        results.classList.remove(
+            "show"
+        );
 
     }
 
 
     const search =
-        document.getElementById("searchInput");
+        document.getElementById(
+            "searchInput"
+        );
 
 
     if (search) {
@@ -5103,7 +5917,9 @@ function openSearchResult(mailId) {
     }
 
 
-    openMail(mailId);
+    openMail(
+        resolvedId
+    );
 
 }
 
@@ -5126,23 +5942,27 @@ function refreshMail() {
             "rotate(360deg)";
 
 
-        setTimeout(function () {
+        setTimeout(
+            function () {
 
-            button.style.transform = "";
+                button.style.transform =
+                    "";
 
-        }, 400);
+            },
+            400
+        );
 
     }
 
 
-    /*
-     * 保持当前文件夹
-     */
+    normalizeMailRows();
 
     renderCurrentFolder();
 
 
-    showToast("邮件列表已刷新");
+    showToast(
+        "邮件列表已刷新"
+    );
 
 }
 
@@ -5154,12 +5974,16 @@ function refreshMail() {
 function toggleDarkMode() {
 
     const enabled =
-        document.body.classList.toggle("dark");
+        document.body.classList.toggle(
+            "dark"
+        );
 
 
     localStorage.setItem(
         "mail-dark-mode",
-        enabled ? "1" : "0"
+        enabled
+            ? "1"
+            : "0"
     );
 
 
@@ -5180,7 +6004,9 @@ function restoreDarkMode() {
         ) === "1"
     ) {
 
-        document.body.classList.add("dark");
+        document.body.classList.add(
+            "dark"
+        );
 
     }
 
@@ -5194,23 +6020,35 @@ function restoreDarkMode() {
 function toggleSidebar() {
 
     const sidebar =
-        document.getElementById("sidebar");
+        document.getElementById(
+            "sidebar"
+        );
 
 
     const overlay =
-        document.getElementById("overlay");
+        document.getElementById(
+            "overlay"
+        );
 
 
-    if (!sidebar || !overlay) {
+    if (
+        !sidebar ||
+        !overlay
+    ) {
 
         return;
 
     }
 
 
-    sidebar.classList.toggle("open");
+    sidebar.classList.toggle(
+        "open"
+    );
 
-    overlay.classList.toggle("show");
+
+    overlay.classList.toggle(
+        "show"
+    );
 
 }
 
@@ -5222,7 +6060,9 @@ function toggleSidebar() {
 function openCompose() {
 
     const modal =
-        document.getElementById("composeModal");
+        document.getElementById(
+            "composeModal"
+        );
 
 
     if (!modal) {
@@ -5232,24 +6072,34 @@ function openCompose() {
     }
 
 
-    modal.classList.add("show");
-
-    document.body.classList.add("modal-open");
-
-
-    setTimeout(function () {
-
-        const input =
-            document.getElementById("composeTo");
+    modal.classList.add(
+        "show"
+    );
 
 
-        if (input) {
+    document.body.classList.add(
+        "modal-open"
+    );
 
-            input.focus();
 
-        }
+    setTimeout(
+        function () {
 
-    }, 100);
+            const input =
+                document.getElementById(
+                    "composeTo"
+                );
+
+
+            if (input) {
+
+                input.focus();
+
+            }
+
+        },
+        100
+    );
 
 }
 
@@ -5257,12 +6107,16 @@ function openCompose() {
 function closeCompose() {
 
     const modal =
-        document.getElementById("composeModal");
+        document.getElementById(
+            "composeModal"
+        );
 
 
     if (modal) {
 
-        modal.classList.remove("show");
+        modal.classList.remove(
+            "show"
+        );
 
     }
 
@@ -5277,7 +6131,10 @@ function closeCompose() {
 function handleComposeBackground(event) {
 
     if (
-        event.target.id === "composeModal"
+        event &&
+        event.target &&
+        event.target.id ===
+            "composeModal"
     ) {
 
         closeCompose();
@@ -5293,26 +6150,48 @@ function handleComposeBackground(event) {
 
 function sendMail(event) {
 
-    event.preventDefault();
+    if (event) {
+
+        event.preventDefault();
+
+    }
+
+
+    const toElement =
+        document.getElementById(
+            "composeTo"
+        );
+
+
+    const subjectElement =
+        document.getElementById(
+            "composeSubject"
+        );
+
+
+    const bodyElement =
+        document.getElementById(
+            "composeBody"
+        );
 
 
     const to =
-        document
-            .getElementById("composeTo")
-            .value
-            .trim();
+        toElement
+            ? toElement.value.trim()
+            : "";
 
 
     const subject =
-        document
-            .getElementById("composeSubject")
-            .value
-            .trim();
+        subjectElement
+            ? subjectElement.value.trim()
+            : "";
 
 
     if (!to) {
 
-        showToast("请输入收件人");
+        showToast(
+            "请输入收件人"
+        );
 
         return;
 
@@ -5322,19 +6201,25 @@ function sendMail(event) {
     closeCompose();
 
 
-    document
-        .getElementById("composeTo")
-        .value = "";
+    if (toElement) {
+
+        toElement.value = "";
+
+    }
 
 
-    document
-        .getElementById("composeSubject")
-        .value = "";
+    if (subjectElement) {
+
+        subjectElement.value = "";
+
+    }
 
 
-    document
-        .getElementById("composeBody")
-        .value = "";
+    if (bodyElement) {
+
+        bodyElement.value = "";
+
+    }
 
 
     showToast(
@@ -5360,10 +6245,16 @@ function replyCurrentMail() {
 
 
     const mail =
-        mailData[currentMailId];
+        getMail(
+            currentMailId
+        );
 
 
     if (!mail) {
+
+        showToast(
+            "找不到这封邮件"
+        );
 
         return;
 
@@ -5375,22 +6266,47 @@ function replyCurrentMail() {
     openCompose();
 
 
-    document
-        .getElementById("composeTo")
-        .value =
-        mail.address;
+    const to =
+        document.getElementById(
+            "composeTo"
+        );
 
 
-    document
-        .getElementById("composeSubject")
-        .value =
-        "Re: " + mail.subject;
+    const subject =
+        document.getElementById(
+            "composeSubject"
+        );
 
 
-    document
-        .getElementById("composeBody")
-        .value =
-        `\n\n\n-------- 原邮件 --------\n${mail.preview}`;
+    const body =
+        document.getElementById(
+            "composeBody"
+        );
+
+
+    if (to) {
+
+        to.value =
+            mail.address || "";
+
+    }
+
+
+    if (subject) {
+
+        subject.value =
+            "Re: " +
+            (mail.subject || "");
+
+    }
+
+
+    if (body) {
+
+        body.value =
+            `\n\n\n-------- 原邮件 --------\n${mail.preview || ""}`;
+
+    }
 
 }
 
@@ -5409,10 +6325,16 @@ function forwardCurrentMail() {
 
 
     const mail =
-        mailData[currentMailId];
+        getMail(
+            currentMailId
+        );
 
 
     if (!mail) {
+
+        showToast(
+            "找不到这封邮件"
+        );
 
         return;
 
@@ -5424,16 +6346,33 @@ function forwardCurrentMail() {
     openCompose();
 
 
-    document
-        .getElementById("composeSubject")
-        .value =
-        "Fwd: " + mail.subject;
+    const subject =
+        document.getElementById(
+            "composeSubject"
+        );
 
 
-    document
-        .getElementById("composeBody")
-        .value =
-        `\n\n\n-------- 转发邮件 --------\n发件人：${mail.sender}\n日期：${mail.date}\n\n${stripHtml(mail.body)}`;
+    const body =
+        document.getElementById(
+            "composeBody"
+        );
+
+
+    if (subject) {
+
+        subject.value =
+            "Fwd: " +
+            (mail.subject || "");
+
+    }
+
+
+    if (body) {
+
+        body.value =
+            `\n\n\n-------- 转发邮件 --------\n发件人：${mail.sender || ""}\n日期：${mail.date || ""}\n\n${stripHtml(mail.body || "")}`;
+
+    }
 
 }
 
@@ -5456,7 +6395,9 @@ function printMail() {
 function showToast(message) {
 
     const toast =
-        document.getElementById("toast");
+        document.getElementById(
+            "toast"
+        );
 
 
     if (!toast) {
@@ -5470,18 +6411,27 @@ function showToast(message) {
         message;
 
 
-    toast.classList.add("show");
+    toast.classList.add(
+        "show"
+    );
 
 
-    clearTimeout(toastTimer);
+    clearTimeout(
+        toastTimer
+    );
 
 
     toastTimer =
-        setTimeout(function () {
+        setTimeout(
+            function () {
 
-            toast.classList.remove("show");
+                toast.classList.remove(
+                    "show"
+                );
 
-        }, 2200);
+            },
+            2200
+        );
 
 }
 
@@ -5496,11 +6446,15 @@ function setupKeyboardShortcuts() {
         "keydown",
         function (event) {
 
-            /* 快速搜索 */
+            /*
+             * 快速搜索
+             */
 
             if (
                 event.key === "/" &&
-                !isTypingTarget(event.target)
+                !isTypingTarget(
+                    event.target
+                )
             ) {
 
                 event.preventDefault();
@@ -5513,15 +6467,21 @@ function setupKeyboardShortcuts() {
 
 
                 if (search) {
+
                     search.focus();
+
                 }
 
             }
 
 
-            /* ESC */
+            /*
+             * ESC
+             */
 
-            if (event.key === "Escape") {
+            if (
+                event.key === "Escape"
+            ) {
 
                 const mailModal =
                     document.getElementById(
@@ -5579,7 +6539,9 @@ function setupKeyboardShortcuts() {
     );
 
 
-    /* 点击其他位置关闭搜索结果 */
+    /*
+     * 点击其他位置关闭搜索结果
+     */
 
     document.addEventListener(
         "click",
@@ -5624,12 +6586,16 @@ function setupKeyboardShortcuts() {
 function isTypingTarget(element) {
 
     if (!element) {
+
         return false;
+
     }
 
 
     const tag =
-        element.tagName.toLowerCase();
+        element.tagName
+            ? element.tagName.toLowerCase()
+            : "";
 
 
     return (
@@ -5652,7 +6618,9 @@ function formatDetailDate(date) {
 function stripHtml(html) {
 
     const temp =
-        document.createElement("div");
+        document.createElement(
+            "div"
+        );
 
 
     temp.innerHTML =
@@ -5670,21 +6638,50 @@ function stripHtml(html) {
 
 function escapeHtml(value) {
 
-    return String(value)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
+    return String(
+        value == null
+            ? ""
+            : value
+    )
+    .replace(
+        /&/g,
+        "&amp;"
+    )
+    .replace(
+        /</g,
+        "&lt;"
+    )
+    .replace(
+        />/g,
+        "&gt;"
+    )
+    .replace(
+        /"/g,
+        "&quot;"
+    )
+    .replace(
+        /'/g,
+        "&#039;"
+    );
 
 }
 
 
 function escapeJs(value) {
 
-    return String(value)
-        .replace(/\\/g, "\\\\")
-        .replace(/'/g, "\\'");
+    return String(
+        value == null
+            ? ""
+            : value
+    )
+    .replace(
+        /\\/g,
+        "\\\\"
+    )
+    .replace(
+        /'/g,
+        "\\'"
+    );
 
 }
 
@@ -5717,7 +6714,9 @@ window.addEventListener(
 
         if (
             modal &&
-            modal.classList.contains("show")
+            modal.classList.contains(
+                "show"
+            )
         ) {
 
             document.body.classList.add(
@@ -5730,7 +6729,8 @@ window.addEventListener(
 );
 
 
+
 </script>
 
 </body>
-</html> 
+</html>    
